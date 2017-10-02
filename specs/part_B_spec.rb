@@ -19,7 +19,7 @@ class TestSportsTeam < MiniTest::Test
   @sports_team
 
   def setup
-    @sports_team = SportsTeam.new("Reds", ["Player_1", "Player_2"], "Coach Carter")
+    @sports_team = SportsTeam.new("Reds", ["Player_1", "Player_2"], "Coach Carter", 0)
   end
 
 # Test 1, 2 & 3
@@ -46,5 +46,11 @@ class TestSportsTeam < MiniTest::Test
     @sports_team.player_name_check("Player 1")
     assert_equal(true, @sports_team.player_name_check("Player_1"))
   end
+
+# Test 7
+def test_adjust_points
+  @sports_team.adjust_points("win")
+  assert_equal(1, @sports_team.points)
+end
 
 end

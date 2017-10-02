@@ -1,10 +1,11 @@
 class SportsTeam
-  attr_accessor :team_name, :players, :coach
+  attr_accessor :team_name, :players, :coach, :points
 
-  def initialize(team_name, players, coach)
+  def initialize(team_name, players, coach, points)
       @team_name = team_name
       @players = players
       @coach = coach
+      @points = points
   end
 
   def team_name
@@ -29,6 +30,11 @@ class SportsTeam
 
   def player_name_check(check)
     @players.include?(check)
+  end
+
+  def adjust_points(win_or_lose)
+    @points += 1 if win_or_lose == "win"
+
   end
 
 end
