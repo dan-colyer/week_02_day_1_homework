@@ -1,7 +1,7 @@
 class SportsTeam
-  def initialize(team_name, player, coach)
+  def initialize(team_name, players, coach)
       @team_name = team_name
-      @player = player
+      @players = players
       @coach = coach
   end
 
@@ -9,6 +9,9 @@ class SportsTeam
     return @team_name
   end
 
-  
+  def players
+    return @players
+  end
+
 
 end
