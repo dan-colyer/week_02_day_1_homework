@@ -34,4 +34,11 @@ class TestSportsTeam < MiniTest::Test
     @sports_team.set_coach("Coach XXX")
     assert_equal("Coach XXX", @sports_team.coach)
   end
+
+# Test 5
+  def test_add_player
+    @sports_team.add_player("Player 3")
+    assert_equal(["Player_1", "Player_2", "Player 3"], @sports_team.players)
+  end
+
 end
