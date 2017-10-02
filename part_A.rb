@@ -22,4 +22,12 @@ class Student
     @cohort = cohort
   end
 
+  def speaks
+    return "I can talk!"
+  end
+
+  def favourite_language(language)
+    return "I love #{language}"
+  end
+
 end

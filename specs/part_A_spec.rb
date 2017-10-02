@@ -27,4 +27,20 @@ class TestStudent < MiniTest::Test
     assert_equal(15, @student.cohort)
   end
 
+  # Test 5
+  def test_student_speaks
+    assert_equal("I can talk!", @student.speaks)
+  end
+
+  # Test 6
+  def test_favourite_language
+
+    assert_equal("I love Ruby", @student.favourite_language("Ruby"))
+  end
+
+
 end
+
+
+#
+# Create a method that takes in a students favourite programming language and returns it as part of a string (eg. student1.say_favourite_language("Ruby") -> "I love Ruby").
